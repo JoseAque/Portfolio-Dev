@@ -18,24 +18,25 @@ interface Props {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+
 	<body>
 		<Header />
 		<slot />
 	</body>
+
 </html>
 
 <style is:global>
 	:root {
-    color-scheme: light dark;
+    color-scheme: dark;
   }
   html {
 		font-family: 'Onest Variable', system-ui, sans-serif;
   }
 	body {
-    background: #050505;
+    background: rgba(17, 17, 17, 0.9);
     display: flex;
-		justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
   }
 </style>

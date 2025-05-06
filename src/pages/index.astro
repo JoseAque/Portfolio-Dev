@@ -1,12 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "@/components/Badge.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="">
 	<main>
-		<h1>Hola!, soy José Aqué <badge>Yucatán, México 🇲🇽</badge></h1>
-		<h2>+3 años de experiencia. Desarrollador Web y Software.
-		</h2>
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
+			>
+				Hola!, soy José Aqué
+				<a
+					href="https://github.com/JoseAque"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex justify-center items-center"
+					><Badge>+3 años de experiencia</Badge></a
+				>
+			</h1>
+			<h2 class="text-xl opacity-80">
+				Desarrollador y diseñador de software, con base en México. Me
+				especializo en crear soluciones digitales eficientes, escalables
+				y centradas en el usuario.
+			</h2>
+		</section>
 	</main>
 </Layout>
