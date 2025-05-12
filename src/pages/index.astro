@@ -7,6 +7,11 @@ import Badge from "@/components/Badge.astro";
 <Layout title="">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<img
+				class="rounded-full w-[70px] h-[70px] mb-6"
+				src="https://avatars.githubusercontent.com/u/105752782?v=4&size=64"
+				alt="joseaque photo"
+			/>
 			<h1
 				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
 			>
@@ -19,11 +24,18 @@ import Badge from "@/components/Badge.astro";
 					><Badge>+3 años de experiencia</Badge></a
 				>
 			</h1>
-			<h2 class="text-xl opacity-80">
-				Desarrollador y diseñador de software, con base en México. Me
-				especializo en crear soluciones digitales eficientes, escalables
-				y centradas en el usuario.
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span class="text-blue-300/90"
+					>Desarrollador y diseñador de software</span
+				>. Me especializo en crear soluciones digitales eficientes,
+				escalables y centradas en el usuario.
+				<span class="text-purple-300/80">Con base en México</span>.
 			</h2>
+			<ul>
+				<a href="https://github.com/JoseAque">
+					GitHub
+				</a>
+			</ul>
 		</section>
 	</main>
 </Layout>
