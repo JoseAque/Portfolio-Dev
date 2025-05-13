@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
 ---
 
 <Layout title="">
@@ -31,8 +33,13 @@ import Badge from "@/components/Badge.astro";
 				escalables y centradas en el usuario.
 				<span class="text-purple-300/80">Con base en México</span>.
 			</h2>
-			<ul>
+			<ul class="flex flex-row gap-x-10 mt-10">
+				<a href="www.linkedin.com/in/joseaque">
+					<LinkedInIcon class="w-6 h-6" />
+					LinkedIn
+				</a>
 				<a href="https://github.com/JoseAque">
+					<GitHubIcon class="w-6 h-6" />
 					GitHub
 				</a>
 			</ul>
