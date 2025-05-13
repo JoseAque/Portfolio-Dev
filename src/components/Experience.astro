@@ -1,0 +1,48 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Marzo 2022",
+    title: "Diseño de UI de marketing en Figma",
+    description:
+      "Todas las páginas y componentes fueron diseñados primero en Figma, y mantenemos la paridad entre ambas versiones incluso al actualizar el proyecto.",
+    link: "#",
+  },
+  {
+    date: "Abril 2022",
+    title: "Código de UI para E-Commerce con Tailwind CSS",
+    description:
+      "Comienza con docenas de componentes web e interacciones construidas sobre Tailwind CSS.",
+  },
+  {
+    date: "Junio 2022",
+    title: "Integración de API con Node.js y Express",
+    description:
+      "Desarrollé APIs RESTful para conectar el frontend con el backend, asegurando un flujo de datos seguro usando JWT y autenticación por middleware.",
+  },
+  {
+    date: "Agosto 2022",
+    title: "Aplicación de chat en tiempo real con Socket.IO",
+    description:
+      "Implementé una app de mensajería en tiempo real con indicadores de escritura, persistencia de mensajes y seguimiento de presencia de usuarios.",
+  },
+  {
+    date: "Noviembre 2022",
+    title: "Despliegue con Docker y AWS",
+    description:
+      "Containericé la aplicación usando Docker y la desplegué en AWS EC2, configurando pipelines CI/CD mediante GitHub Actions.",
+  },
+];
+
+---
+
+<ol class="relative border-s border-purple-900/60 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
