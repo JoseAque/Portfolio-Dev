@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio-Dev",
+  "name": "portfolio-dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,10 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.5",
-    "@fontsource-variable/onest": "^5.2.7",
-    "@fontsource/onest": "^5.2.7",
-    "astro": "^4.16.18",
-    "tailwindcss": "^3.4.17"
+    "@astrojs/tailwind": "5.1.5",
+    "@fontsource-variable/onest": "5.2.7",
+    "@fontsource/onest": "5.2.7",
+    "astro": "4.16.18",
+    "tailwindcss": "3.4.17"
   }
 }

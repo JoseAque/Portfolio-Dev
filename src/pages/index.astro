@@ -1,22 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Card from "../components/Card.astro";
 import Badge from "@/components/Badge.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import LinkedInIcon from "@/icons/LinkedIn.astro";
 import GitHubIcon from "@/icons/GitHub.astro";
 import MailIcon from "@/icons/Mail.astro";
 import Experience from "@/components/Experience.astro";
-import BriefCase from "@/icons/BriefCase.astro";
+import BriefCaseIcon from "@/icons/BriefCase.astro";
+import CodeIcon from "@/icons/Code.astro";
+import Projects from "@/components/Projects.astro";
+import ProfileIcon from "@/icons/Profile.astro";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
 <Layout
 	title="Portfolio de José Aqué"
 	description="Portafolio personal de José Aqué, desarrollador y diseñador de software."
 >
-	<main class="px-4">
-		<SectionContainer class="py-44 pb-24" id="top">
+	<main class="px-44">
+		<SectionContainer class="py-44 pb-32" id="top">
 			<img
 				class="rounded-full size-[70px] mb-6"
 				src="https://avatars.githubusercontent.com/u/105752782?v=4&size=64"
@@ -34,7 +37,9 @@ import BriefCase from "@/icons/BriefCase.astro";
 					><Badge>+3 años de experiencia</Badge></a
 				>
 			</h1>
-			<h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
+			<h2
+				class="text-xl lg:text-2xl opacity-85 text-balance max-w-[700px]"
+			>
 				<span class="text-sky-300/90"
 					>Desarrollador y diseñador de software</span
 				>. Me especializo en crear soluciones digitales eficientes,
@@ -43,26 +48,44 @@ import BriefCase from "@/icons/BriefCase.astro";
 			</h2>
 			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/joseaque">
-					<LinkedInIcon class="size-4 md:size-6"/>
+					<LinkedInIcon class="size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/JoseAque">
-					<GitHubIcon class="size-4 md:size-6"/>
+					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="mailto:jose.aque21@hotmail.com">
-					<MailIcon class="size-4 md:size-6"/>
+					<MailIcon class="size-4 md:size-6" />
 					jose.aque21@hotmail.com
 				</SocialPill>
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer  id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-				<BriefCase class="size-7"/>
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<BriefCaseIcon class="size-7" />
 				Experiencia
 			</h2>
 			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+			>
+				<ProfileIcon class="size-7" />
+				Sobre mi
+			</h2>
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>
