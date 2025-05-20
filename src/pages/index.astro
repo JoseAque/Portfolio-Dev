@@ -21,24 +21,23 @@ import AboutMe from "@/components/AboutMe.astro";
 	<main class="px-4 md:px-44">
 		<SectionContainer class="py-20 lg:py-44 lg:pb-32" id="top">
 			<div class="flex gap-4 mb-6">
-			<img
-				class="rounded-full shadow-lg size-[70px]"
-				src="https://avatars.githubusercontent.com/u/105752782?v=4&size=64"
-				alt="José Aqué"
-			/>
-			<a
+				<img
+					class="rounded-full shadow-lg size-[70px]"
+					src="https://avatars.githubusercontent.com/u/105752782?v=4&size=64"
+					alt="José Aqué"
+				/>
+				<a
 					href="https://github.com/JoseAque"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="flex items-center md:justify-center md:hover:scale-105"
 					><Badge>+3 años de experiencia</Badge></a
 				>
-		</div>
+			</div>
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				Hola!, soy José Aqué
-
 			</h1>
 			<h2
 				class="text-xl lg:text-2xl opacity-85 text-justify max-w-[700px]"
@@ -50,15 +49,27 @@ import AboutMe from "@/components/AboutMe.astro";
 				<span class="text-purple-300/80">Con base en México</span>.
 			</h2>
 			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/joseaque">
+				<SocialPill
+					href="https://www.linkedin.com/in/joseaque" 
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<LinkedInIcon class="size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
-				<SocialPill href="https://github.com/JoseAque">
+				<SocialPill
+					href="https://github.com/JoseAque"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>
-				<SocialPill href="mailto:jose.aque21@hotmail.com">
+				<SocialPill
+					href="mailto:jose.aque21@hotmail.com" 
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<MailIcon class="size-4 md:size-6" />
 					jose.aque21@hotmail.com
 				</SocialPill>
@@ -66,7 +77,9 @@ import AboutMe from "@/components/AboutMe.astro";
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+			<h2
+				class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
+			>
 				<BriefCaseIcon class="size-7" />
 				Experiencia
 			</h2>
@@ -74,7 +87,9 @@ import AboutMe from "@/components/AboutMe.astro";
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+			<h2
+				class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
+			>
 				<CodeIcon class="size-7" />
 				Proyectos
 			</h2>
