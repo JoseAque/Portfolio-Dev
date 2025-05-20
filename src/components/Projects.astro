@@ -2,6 +2,10 @@
 import HTML from "@/icons/HTML.astro";
 import CSS from "@/icons/CSS.astro";
 import JavaScript from "@/icons/JavaScript.astro";
+import React from "@/icons/React.astro";
+import TailwindCSS from "@/icons/TailwindCSS.astro";
+import NodeJS from "@/icons/Node.js.astro";   
+import MySQL from "@/icons/MySQL.astro";
 
 const TAGS = {
     HTML: {
@@ -19,17 +23,46 @@ const TAGS = {
         class: "bg-[#483f00] text-white",
         icon: JavaScript,
     },
+    React: {
+        name: "React",
+        class: "bg-[#204E6D] text-white",
+        icon: React,
+    },
+    TailwindCSS: {
+        name: "TailwindCSS",
+        class: "bg-[#1D7F8A] text-white",
+        icon: TailwindCSS,
+    },
+    NodeJS: {
+        name: "NodeJS",
+        class: "bg-[#1C672B] text-white",
+        icon: NodeJS,
+    },
+    MySQL: {
+        name: "MySQL",
+        class: "bg-[#292277] text-white",
+        icon: MySQL,
+    },
+    
 };
 import GitHub from "@/icons/GitHub.astro";
 
 const PROJECTS = [
     {
-        title: "GameStore",
+        title: "Web - GameStore",
         description:
-            "Este es un sitio web de juegos responsive que utiliza HTML, CSS y JavaScript. Contiene una barra de navegación adaptable, cuadro de notificaciones, menú animado, sección de inicio, slider de juegos populares, sección de nuevos juegos, página de descarga con videos, información sobre el juego, capturas de pantalla y enlaces de descarga.",
+            "Este es un sitio web de juegos responsive que utiliza HTML, CSS y JavaScript. Contiene una barra de navegación adaptable, cuadro de notificaciones, menú animado, sección de inicio, slider de juegos populares...",
         github: "https://github.com/JoseAque/Responsive-Games-Website",
         image: "projects/GamesWebsite.webp",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+    },
+    {
+        title: "Web- Plataforma Para El Monitoreo De Flota Vehicular",
+        description:
+            "Esta una plataforma web para gestionar y monitorear el rendimiento de los vehículos de una flota. Contiene Login, Interfaz de Usuario y Administrador, Dashboard, Formulario, CRUD de datos, Grificas, Estadisticas...",
+        github: "https://github.com/JoseAque/Responsive-Games-Website",
+        image: "projects/PlataformaParaElMonitoreoDeFlotaVehicular.webp",
+        tags: [TAGS.React, TAGS.TailwindCSS, TAGS.NodeJS, TAGS.MySQL],
     },
 ];
 ---
@@ -37,26 +70,28 @@ const PROJECTS = [
 {
     PROJECTS.map(({ title, description, image, tags }) => (
         <article>
-            <h3 class="text-2xl font-semibold text-purple-300/80 mb-2">
-                {title}
-            </h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {tags.map((tag) => (
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                        <tag.icon class="size-4" />
-                        {tag.name}
-                        </span>
-                    </li>
-                ))}
-            </ul>
             <img
-                class="rounded-lg shadow-black shadow-2xl"
+                class="rounded-lg shadow-black shadow-2xl mb-6"
                 loading="lazy"
                 src={image}
                 alt={`Captura de pantalla del proyecto ${image}`}
             />
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs font-semibold ${tag.class} py-1 px-2`}
+                        >
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <h3 class="text-2xl font-semibold text-white mb-2">
+                {title}
+            </h3>
+            <p class="text-xl mb-14 text-pretty opacity-70">{description}</p>
         </article>
     ))
 }
